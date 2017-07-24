@@ -1,0 +1,156 @@
+{
+    "sales": [
+        {
+            "name": "Mori Atsunori",
+            "ratio": {
+                "getRatio": 55,
+                "marketingTarget": 54545455,
+                "prospectOnHand": 37000000
+            },
+            "currentTarget": {
+                "month": "APR",
+                "soTarget": 3000000,
+                "soActual": 1800000,
+                "achievment": 60
+            },
+            "customerVisit": {
+                "date": [
+                    "11月2日",
+                    "11月3日",
+                    "11月4日",
+                    "11月5日"
+                ],
+                "customers": [
+                    6,
+                    6,
+                    6,
+                    12
+                ]
+            },
+            "generalData": {
+                "image": "https://www.img.in.th/images/fc3625e341b85ac3708ea3b711329a4f.png",
+                "achievementRatio": 37,
+                "annualSOTarget": 30000000,
+                "soResult": 11000000,
+                "prospectNo": 12,
+                "newProspect": 2,
+                "success": 4,
+                "lost": 1
+            },
+            "prospect": [
+                {
+                    "planOf": "2017-04-01",
+                    "status": "B",
+                    "customer": "YCT",
+                    "prospectName": "",
+                    "nextStep": "",
+                    "soAmount": null
+                },
+                {
+                    "planOf": "2017-04-01",
+                    "status": "C+",
+                    "customer": "YCT",
+                    "prospectName": "System Support",
+                    "nextStep": "Propose new structure on 22nd Apr.<br /> Tnternal meeting to finalize presenations within 20th Apr.",
+                    "soAmount": null
+                },
+                {
+                    "planOf": "2017-04-01",
+                    "status": "C",
+                    "customer": "YMP",
+                    "prospectName": "",
+                    "nextStep": "",
+                    "soAmount": null
+                },
+                {
+                    "planOf": "2017-05-01",
+                    "status": "C+",
+                    "customer": "",
+                    "prospectName": "",
+                    "nextStep": "",
+                    "soAmount": null
+                },
+                {
+                    "planOf": "2017-05-01",
+                    "status": "C",
+                    "customer": "",
+                    "prospectName": "",
+                    "nextStep": "",
+                    "soAmount": null
+                },
+                {
+                    "planOf": "2017-05-01",
+                    "status": "D",
+                    "customer": "",
+                    "prospectName": "",
+                    "nextStep": "",
+                    "soAmount": null
+                },
+                {
+                    "planOf": "2017-06-01",
+                    "status": "C",
+                    "customer": "",
+                    "prospectName": "",
+                    "nextStep": "",
+                    "soAmount": null
+                },
+                {
+                    "planOf": "2017-06-01",
+                    "status": "D",
+                    "customer": "",
+                    "prospectName": "",
+                    "nextStep": "",
+                    "soAmount": null
+                },
+                {
+                    "planOf": "2017-07-01",
+                    "status": "C+",
+                    "customer": "",
+                    "prospectName": "",
+                    "nextStep": "",
+                    "soAmount": null
+                },
+                {
+                    "planOf": "2017-07-01",
+                    "status": "C",
+                    "customer": "",
+                    "prospectName": "",
+                    "nextStep": "",
+                    "soAmount": null
+                },
+                {
+                    "planOf": "2017-07-01",
+                    "status": "D",
+                    "customer": "",
+                    "prospectName": "",
+                    "nextStep": "",
+                    "soAmount": null
+                },
+                {
+                    "planOf": "2017-08-01",
+                    "status": "C+",
+                    "customer": "",
+                    "prospectName": "",
+                    "nextStep": "",
+                    "soAmount": null
+                },
+                {
+                    "planOf": "2017-08-01",
+                    "status": "D",
+                    "customer": "",
+                    "prospectName": "",
+                    "nextStep": "",
+                    "soAmount": null
+                },
+                {
+                    "planOf": "2017-09-01",
+                    "status": "B",
+                    "customer": "",
+                    "prospectName": "",
+                    "nextStep": "",
+                    "soAmount": null
+                }
+            ]
+        }
+    ]
+}

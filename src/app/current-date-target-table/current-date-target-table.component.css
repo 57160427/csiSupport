@@ -1,0 +1,12 @@
+table{
+    overflow: auto;
+}
+th,td{
+    text-align: center;
+}
+/deep/.mat-tab-label, /deep/.mat-tab-label-active{
+ min-width: 0!important;
+ padding: 3px!important;
+ margin: 3px!important;
+ flex: 1;
+}

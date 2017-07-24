@@ -1,0 +1,10 @@
+.marketing-data{
+    margin-top: 5px;
+    overflow: auto;
+}
+table{
+    overflow: auto;
+}
+th,td{
+    text-align: center;
+}

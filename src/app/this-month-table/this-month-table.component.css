@@ -1,0 +1,11 @@
+.tab-edit{
+    margin-right: 10px;
+}
+.table tr.active td {
+  background-color:#123456 !important;
+  color: white;
+}
+.pagination { margin: 0px !important; }
+table{
+    overflow: auto;
+}

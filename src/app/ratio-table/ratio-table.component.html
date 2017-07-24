@@ -1,0 +1,12 @@
+<div class="marketing-data">
+  <table class="table table-striped ">
+    <tr class="tb-head">
+      <th *ngFor="let title of titles">{{title}}</th>
+    </tr>
+    <tr class="tb-body">
+      <td>{{persen| number : fractionSize}}%</td>
+      <td>{{marketingTarget| number : fractionSize}}</td>
+      <td>{{onHand| number : fractionSize}}</td>
+    </tr>
+  </table>
+</div>

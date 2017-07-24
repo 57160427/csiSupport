@@ -1,0 +1,99 @@
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <li>
+    <h5>This month SO Plan</h5>
+  </li>
+  <li role="presentation" class="active">
+    <a href="#success" aria-controls="success" role="tab" data-toggle="tab">Success</a>
+  </li>
+  <li role="presentation">
+    <a href="#lost" aria-controls="lost" role="tab" data-toggle="tab">Lost</a>
+  </li>
+  <li role="presentation">
+    <a href="#other" aria-controls="other" role="tab" data-toggle="tab">Other</a>
+  </li>
+  <li role="presentation" class="navbar-right tab-edit">
+    <a href="#edit" aria-controls="edit" role="tab" data-toggle="tab">Edit</a>
+  </li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="success">
+    <table *ngIf="successTables?.length > 0" class="table table-hover table-bordered glyphicon glyphicon-refresh glyphicon-refresh-animate">
+      <thead>
+        <tr>
+          <th style="vertical-align:middle" *ngFor="let title of titles" class="text-center">{{title}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let successTable of successTables; let i = index" (click)="setClickedRow(i)" [class.active]="i == selectedRow">
+          <td class="text-center" style="vertical-align:middle">{{successTable.planOf | date: 'MMM' | uppercase}}</td>
+          <td class="text-center" style="vertical-align:middle">{{successTable.status}}</td>
+          <td class="text-center" style="vertical-align:middle">{{successTable.customer}}</td>
+          <td class="text-center" style="vertical-align:middle">{{successTable.prospectName}}</td>
+          <td [innerHTML]="successTable.nextStep"></td>
+          <td class="text-center" style="vertical-align:middle">{{successTable.soAmount| number : fractionSize}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 *ngIf="successTables?.length == 0" class="text-warning glyphicon glyphicon-exclamation-sign">{{name}} didn't has successed in this month.</h3>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="lost">
+    <table class="table table-hover table-bordered">
+      <thead>
+        <tr>
+          <th style="vertical-align:middle" *ngFor="let title of titles" class="text-center">{{title}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let lostTable of lostTables; let i = index" (click)="setClickedRow(i)" [class.active]="i == selectedRow">
+          <td class="text-center" style="vertical-align:middle">{{lostTable.planOf | date: 'MMM' | uppercase}}</td>
+          <td class="text-center" style="vertical-align:middle">{{lostTable.status}}</td>
+          <td class="text-center" style="vertical-align:middle">{{lostTable.customer}}</td>
+          <td class="text-center" style="vertical-align:middle">{{lostTable.prospectName}}</td>
+          <td [innerHTML]="lostTable.nextStep"></td>
+          <td class="text-center" style="vertical-align:middle">{{lostTable.soAmount| number : fractionSize}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="other">
+    <table class="table table-hover table-bordered">
+      <thead>
+        <tr>
+          <th style="vertical-align:middle" *ngFor="let title of titles" class="text-center">{{title}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let otherTable of otherTables; let i = index" (click)="setClickedRow(i)" [class.active]="i == selectedRow">
+          <td class="text-center" style="vertical-align:middle">{{otherTable.planOf | date: 'MMM' | uppercase}}</td>
+          <td class="text-center" style="vertical-align:middle">{{otherTable.status}}</td>
+          <td class="text-center" style="vertical-align:middle">{{otherTable.customer}}</td>
+          <td class="text-center" style="vertical-align:middle">{{otherTable.prospectName}}</td>
+          <td [innerHTML]="otherTable.nextStep"></td>
+          <td class="text-center" style="vertical-align:middle">{{otherTable.soAmount| number : fractionSize}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="edit">
+    <table class="table table-hover table-bordered">
+      <thead>
+        <tr>
+          <th style="vertical-align:middle" *ngFor="let title of titles" class="text-center">{{title}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let prospect of prospects; let i = index" (click)="setClickedRow(i)" [class.active]="i == selectedRow">
+          <td *ngIf="(prospect.planOf | date:'MM') == (date | date:'MM')" class="text-center" style="vertical-align:middle">{{prospect.planOf | date: 'MMM' | uppercase}}</td>
+          <td *ngIf="(prospect.planOf | date:'MM') == (date | date:'MM')" class="text-center" style="vertical-align:middle">{{prospect.status}}</td>
+          <td *ngIf="(prospect.planOf | date:'MM') == (date | date:'MM')" class="text-center" style="vertical-align:middle">{{prospect.customer}}</td>
+          <td *ngIf="(prospect.planOf | date:'MM') == (date | date:'MM')" class="text-center" style="vertical-align:middle">{{prospect.prospectName}}</td>
+          <td *ngIf="(prospect.planOf | date:'MM') == (date | date:'MM')" [innerHTML]="prospect.nextStep"></td>
+          <td *ngIf="(prospect.planOf | date:'MM') == (date | date:'MM')" class="text-center" style="vertical-align:middle">{{prospect.soAmount}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

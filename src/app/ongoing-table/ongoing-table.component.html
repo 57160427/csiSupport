@@ -1,0 +1,32 @@
+<h5>Ongoing Prospects</h5>
+<table class="table table-hover table-bordered">
+  <thead>
+    <tr>
+      <th style="vertical-align:middle" *ngFor="let title of titles" class="text-center">{{title}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let prospectOngoing of prospectsOngoing; let i = index" (click)="setClickedRow(i)" [class.active]="i == selectedRow">
+      <td class="text-center" style="vertical-align:middle">{{prospectOngoing.planOf | date: 'MMM' | uppercase}}</td>
+      <td class="text-center" style="vertical-align:middle">{{prospectOngoing.status}}</td>
+      <td class="text-center" style="vertical-align:middle">{{prospectOngoing.customer}}</td>
+      <td class="text-center" style="vertical-align:middle">{{prospectOngoing.prospectName}}</td>
+      <td [innerHTML]="prospectOngoing.nextStep"></td>
+      <td class="text-center" style="vertical-align:middle">{{prospectOngoing.soAmount| number : fractionSize}}</td>
+    </tr>
+  </tbody>
+</table>
+<div class="btn-toolbar" role="toolbar" style="margin: 0;">
+  <div class="btn-group">
+    <label style="margin-top:10px">Page {{currentIndex}} from {{pageNumber}}</label>
+  </div>
+  <div class="btn-group pull-right">
+    <ul class="pagination">
+      <li [ngClass]="{'disabled': (currentIndex == 1 || pageNumber == 0)}"><a (click)="prevPage()" href="#">Prev</a></li>
+      <li *ngFor="let page of pagesIndex" [ngClass]="{'active': (currentIndex == page)}">
+        <a (click)="setPage(page)" href="#">{{page}}</a>
+      </li>
+      <li [ngClass]="{'disabled': (currentIndex == pageNumber || pageNumber == 0)}"><a (click)="nextPage()" href="#">Next</a></li>
+    </ul>
+  </div>
+</div>
